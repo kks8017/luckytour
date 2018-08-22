@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" /> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="./css/sub_header.css" />
+<link rel="stylesheet" href="./css/air.css" />
+<link rel="stylesheet" href="./css/sub_footer.css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/addfavorite.js"></script>
+<script src="./js/common.js"></script>
+<title>제주럭키투어</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="banner"  style="position:relative;">
+                <a href="#none"><img src="./image/top_banner.jpg" /></a>
+                <input type="hidden" id="cookie" value="banner" />
+                <img src="./image/close_btn.png" class="close_btn" style="position:absolute;top:25px;right:102px;cursor:pointer"/>
+            </div>
+            <div class="head_wrap">
+            <div class="head">
+                <p><span class="hide">즐겨찾기</span><img src="./image/favorit_btn.png"  id="favorite"/></p>
+                <ul>
+                    <li><a href="#none">로그인</a></li>
+                    <li><a href="#none">회원가입</a></li>
+                    <li><a href="./group_tour.html">단체여행문의</a></li>
+                    <li><a href="#none">고객센터</a></li>
+                    <li><a href="#none">예약확인</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="header">
+                <p><a href="../index.html"><span class="hide">로고</span><img src="./image/main_logo.png" /></a></p>
+                <div class="search_bar">
+                    <fieldset>
+                        <legend class="hide">통합검색</legend>
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="회원가입시 5000 포인트 적립!" />
+                            <input type="image" src="./image/search_btn.png" />
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nav_wrap">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./mdpackage.html">MD추천패키지</a></li>
+                        <li><a href="./package.html" >자유여행패키지</a></li>
+                        <li><a href="#none">버스/택시패키지</a></li>
+                        <li><a href="./air.html" class="select">항공</a></li>
+                        <li><a href="./rent.html">렌트</a></li>
+                        <li><a href="./lodge.html">숙박</a></li>
+                        <li><a href="#none">버스투어</a></li>
+                        <li><a href="#none">골프투어</a></li>
+                        <li><a href="#none">관광지입장권</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- header 끝 -->
+        <div id="content">
+            <div class="search">
+               <div class="search_tit">
+                    <!--<img src="./image/bar2.png" />-->
+                    <span class="bar mar"></span>
+                    <h3>항공</h3>
+                    <span class="bar"></span>
+                   <!-- <img src="./image/bar2.png" />-->
+               </div>
+				 <div class="search_bar">
+                   <form action="#" method="get">
+                       <ul>
+                           <li><p>가는날</p><input type="text" name="sdate" id="sdate" style="vertical-align:top"/></li>
+                           <li><p>오는날</p><input type="text" name="edate" id="edate" style="vertical-align:top"/></li>
+                           <li><p>출발지</p><select name="start" class="lsel">
+                               <option value="0">김포출발</option>
+                               <option value="1">제주출발</option>
+                               <option value="2">대구출발</option>
+                               <option value="3">부산출발</option>
+                           </select></li>
+                           <li><p>성인<span class="sp">만 13세이상</span></p><select name="adult" class="lsel">
+                               <option value="0">1명</option>
+                               <option value="1">2명</option>
+                               <option value="2">3명</option>
+                               <option value="3">4명</option>
+                               </select></li>
+                           <li><p>소아<span class="sp">만 12세이하</span></p><select name="lsel" class="lsel">
+                               <option value="0">1명</option>
+                               <option value="1">2명</option>
+                               <option value="2">3명</option>
+                               <option value="3">4명</option>
+                           </select></li>
+                           <li><p>유아<span>만 24개월미만</span></p><select name="baby" class="lsel">
+                               <option value="0">1명</option>
+                               <option value="1">2명</option>
+                               <option value="2">3명</option>
+                               <option value="3">4명</option>
+                           </select></li>
+                           <!-- <li><p>여행상품선택</p><select name="package" class="lsel2">
+                               <option value="0">할인항공+숙소+렌트카</option>
+                               <option value="1">할인항공+숙소+렌트카</option>
+                               <option value="2">할인항공+숙소+렌트카</option>
+                               <option value="3">할인항공+숙소+렌트카</option>
+                           </select></li> -->
+                           <li><span class="hide">검색</span><input type="image" src="./image/big_search_btn.png" /></li>
+                           
+                       </ul>
+                   </form>
+               </div> 
+            </div>
+
+            <div class="package_tabmenu">
+               
+                <div class="area">
+                    <div class="air_area">
+                       <table style="width:1200px">
+							<tr>
+								<th width="100px">항공사</th>
+								<th width="150px">출발일자</th>
+								<th width="150px"><span>제주</span>출발일자</th>
+								<th width="100px">여행일정</th>
+								<th width="100px">1인정상가</th>
+								<th width="100px">할인율</th>
+								<th width="100px">인원</th>
+								<th width="100px">할인가</th>
+								<th width="200px">기타사항</th>
+								<th width="100px">예약</th>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+							<tr class="odd">
+								<td><p><img src="./image/big_asiana.png" style="position:relative;top:0px"/></p><p><span style="position:relative;top:3px">아시아나</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span class="position">2018-05-01(목)</span></p><p class="break"><span class="time" style="position:relative;top:-10px">06:30</span></p></td>
+								<td><p><span style="position:relative;top:-5px">2박3일</span></p></td>
+								<td><p><span class="strike" style="position:relative;top:-5px">130,000원</span></p></td>
+								<td><p><span class="dis" style="position:relative;top:-5px">51%</span></p></td>
+                                <td><p><span  class="position" style="position:relative;top:-25px">성인<span class="b">2</span></span></p>
+                                    <p class="break"><span class="position" style="position:relative;top:-17px">소인<span class="b">1</span></span></p><p class="break"><span class="position" style="position:relative;top:-9px">유아<span class="b">0</span></span></p></td>
+								<td><p><span class="disprice" style="position:relative;top:-5px">84,200원</span></p></td>
+								<td><p><span class="position">유류할증료포함</span></p><p class="break"><span>실시간/담당체크요망</span></p></td>
+								<td><p><a href="#none"><img src="./image/select_btn.png" style="position:relative;top:12px"/></a></td>
+							</tr>
+					   </table>
+                    </div>
+                   
+                 </div>
+             </div>
+            
+        </div><!-- content 끝 -->
+        
+        <div id="footer">
+            <ul class="info">
+               <li><p><a href="#none">국내여행표준약관</a></p></li> 
+               <li><p><a href="#none">개인정보처리방침</a></p></li> 
+               <li><p><a href="#none">고객센터</a></p></li> 
+            </ul>
+			<div style="border-top:1px solid #dadada"></div>
+            <div class="foot_cont">
+                <div class="lcont">
+                    <p>고객센터</p>
+                    <p>064)746-2727</p>
+                    <p>운영시간 09:00~18:00</p>
+                    <p>점심시간 12:00~13:00</p>
+                    <p>토.일요일 및 국공휴일 휴무</p>
+                </div>
+                <div class="rcont">
+                    <p><span>사업자등록번호 : 000-00-00000</span> <span>통신판매업신고 : 제 0000-0000&nbsp;&nbsp;&nbsp;호</span><span>관광사업등록 제 2016-11</span></p>
+                    <p><span>제주특별자치도 제주시 동문로 52,3층(일도이동)</span><span>(주)제주럭키투어 (대표이사 강철진)</span>
+                    <span>개인정보관리책임자 : 강철진</span><a href="#none">사업자정보확인</a><img src="./image/footer_arrow.png" /></p>
+                    <p><span>COPYRIGHT &copy; (주)제주럭키투어 ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div> <!--footer 끝 -->
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" /> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="./css/main_header.css" />
+<link rel="stylesheet" href="./css/main.css" />
+<link rel="stylesheet" href="./css/main_footer.css" />
+<link rel="stylesheet" type="text/css" href="./css/jq.rolling.css"/>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script language="javascript" src="./js/jquery-ui.min.js" type="text/javascript"></script>
+<script language="javascript" src="./js/jq.rolling.js" type="text/javascript"></script>
+<script src="./js/main.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/addfavorite.js"></script>
+<script src="./js/common.js"></script>
+<title>제주럭키투어</title>
+</head>
+<body>
+    <div id="wrap" style="position: relative">
+        <div id="header">
+            <div class="banner">
+                <a href="#none"><img src="./main_img/top_banner.jpg" /></a>
+                <input type="hidden" id="cookie" value="banner" />
+                <img src="./main_img/close_btn.png" class="close_btn" style="position:absolute;top:25px;right:51px;cursor:pointer"/>
+            </div>
+            <div class="head_wrap">
+            <div class="head">
+                <p><span class="hide">즐겨찾기</span><img src="./main_img/favorit_btn.png"  id="favorite"/></p>
+                <ul>
+                    <li><a href="#none">로그인</a></li>
+                    <li><a href="#none">회원가입</a></li>
+                    <li><a href="./sub/group_tour.html">단체여행문의</a></li>
+                    <li><a href="#none">고객센터</a></li>
+                    <li><a href="#none">예약확인</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="header">
+                <p><a href="#none"><span class="hide">로고</span><img src="./main_img/main_logo.png" /></a></p>
+                <div class="search_bar">
+                    <fieldset>
+                        <legend class="hide">통합검색</legend>
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="회원가입시 5000 포인트 적립!" />
+                            <input type="image" src="./main_img/search_btn.png" />
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nav_wrap">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./sub/mdpackage.html">MD추천패키지</a></li>
+                        <li><a href="./sub/package.html" >자유여행패키지</a></li>
+                        <li><a href="#none">버스/택시패키지</a></li>
+                        <li><a href="./sub/air.html">항공</a></li>
+                        <li><a href="./sub/rent.html">렌트</a></li>
+                        <li><a href="./sub/lodge.html">숙박</a></li>
+                        <li><a href="#none">버스투어</a></li>
+                        <li><a href="./sub/golftour.html">골프투어</a></li>
+                        <li><a href="#none">관광지입장권</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- header 끝 -->
+        <div id="content"> <!-- content 시작-->
+		
+         <div id="rolling">
+                <ul>
+                        <li class="sp01"><img src="./main_img/banner1.jpg" class="banner_img"/></li>
+                        <li class="sp02"><img src="./main_img/banner2.jpg" class="banner_img"/></li>
+                        <li class="sp03"><img src="./main_img/banner3.jpg" class="banner_img"/></li>
+                        <li class="sp04"><img src="./main_img/banner4.jpg" class="banner_img"/></li>
+                        <li class="sp05"><img src="./main_img/banner5.jpg" class="banner_img"/></li>
+                </ul>
+
+         </div>
+         <ul class="pages">
+                    <li>rolling_banner1</li>
+                    <li>rolling_banner2</li>
+                    <li>rolling_banner3</li>
+                    <li>rolling_banner4</li>
+                    <li>rolling_banner5</li>
+         </ul>
+                    <div class="quick_wrap"></div>
+                    <ul class="quick_search">
+                          <li class="menu"><img src="./main_img/package_icon.png" class="package"/><span class="menu">패키지</span></li>
+                          <li class="menu"><img src="./main_img/rent_icon.png" class="rent"/><span  class="menu">렌터카</span></li>
+                          <li class="act menu"><img src="./main_img/air_icon.png" class="air"/><span  class="menu">항공</span></li>
+                          <li class="menu"><img src="./main_img/lodge_icon.png" class="lodge"/><span  class="menu">숙박</span></li>
+                          <li class="menu"><img src="./main_img/bus_icon.png" class="bus"/><span  class="menu">버스</span></li>
+                          <li class="menu"><img src="./main_img/taxi_icon.png" class="taxi"/><span  class="menu">택시</span></li>
+                          <li>
+                              
+                               <ul class="quick_form">
+                               <li>
+                                   <div class="package">
+										<p class="close"><span class="hide">닫기</span><img src="./main_img/close_btn.png" /></p>
+										<form method="" action="">
+												<div class="date"><p class="left"><span  class="date">가는날</span><input type="text" name="psdate" id="psdate" style="vertical-align:top"/></p>
+												<p class="right"><span  class="date">오는날</span><input type="text" name="pedate" id="pedate" style="vertical-align:top"/></p></div>
+												
+												<div class="goods">
+														<p><span class="tit">여행상품선택</span>
+														 <select class="lsel">
+															<option value="0">할인항공+숙박+렌트카</option>
+															<option value="1">숙박+렌터카</option>
+															<option value="2">할인항공+렌트카</option>
+															<option value="3">할인항공+숙박</option>
+														</select></p>
+													</div>
+											
+												<div class="inwon">
+													<p><span class="tit">성인</span><span class="com">만 13세이상</span>
+													<select class="lsel">
+														<option value="0">1명</option>
+														<option value="1">2명</option>
+														<option value="2">3명</option>
+														<option value="3">4명</option>
+													</select></p>
+													<p><span  class="tit">소아</span><span class="com">만 12세이하</span>
+													<select  class="lsel">
+														<option value="0">1명</option>
+														<option value="1">2명</option>
+														<option value="2">3명</option>
+														<option value="3">4명</option>
+													</select></p>
+													<p><span  class="tit">유아</span><span class="com">만 24개월미만</span>
+													<select  class="lsel">
+														<option value="0">1명</option>
+														<option value="1">2명</option>
+														<option value="2">3명</option>
+														<option value="3">4명</option>
+													</select></p>
+												</div>
+												  <div class="region">
+														 <p class="left"><span class="tit">출발지</span>
+															<select class="lsel">
+																<option value="0">김포출발</option>
+																<option value="1">제주출발</option>
+																<option value="2">대구출발</option>
+																<option value="3">부산출발</option>
+															</select></p>
+														  <p class="right"><span class="tit">상품검색</span>
+																<input type="text" name="psearch" class="psearch" />
+															</p>
+													</div>
+	
+												<input type="submit" value="패키지검색" />
+										</form>
+								   </div>
+                               </li>
+                                <li>
+                                   <div class="rent">
+								   <p class="close"><span class="hide">닫기</span><img src="./main_img/close_btn.png" /></p>
+									<form action="#" method="">
+										<div class="top">
+											<p><span class="tit">인수</span>
+											<input type="text" name="rsdate" id="rsdate" style="vertical-align:top"/> <select class="lsel"> 
+												 <option value="0">08:00</option>
+												 <option value="1">08:30</option>
+												 <option value="2">09:00</option>
+												 <option value="3">09:30</option>
+												 <option value="4">19:00</option>
+												 <option value="5">19:30</option>
+												 <option value="6">20:00</option>
+											</select>
+											</p>
+											<p><span class="tit">반납</span>
+											<input type="text" name="redate" id="redate" style="vertical-align:top"/> <select class="lsel"> 
+												 <option value="0">08:00</option>
+												 <option value="1">08:30</option>
+												 <option value="2">09:00</option>
+												 <option value="3">09:30</option>
+												 <option value="4">19:00</option>
+												 <option value="5">19:30</option>
+												 <option value="6">20:00</option>
+											</select>
+											</p>
+										</div>
+										<div class="middle">
+											<p><span class="tit">차량검색</span>
+											<input type="text" class="rsearch" />
+											</p>
+										</div>
+											<input type="submit" value="차량검색" />
+										</form>
+								   </div>
+                               </li>
+                                <li>
+                                   <div class="air">
+                                       <p class="close"><span class="hide">닫기</span><img src="./main_img/close_btn.png" /></p>
+										<form method="" action="">
+												<p class="ticket"><input type="radio" id="r1" name="ticket"><label for="r1"><span></span>왕복</label>
+												<input type="radio" id="r2" name="ticket" checked="checked"><label for="r2"><span></span>편도</label></p>
+												 <div class="region"><p class="left"><span>출발지</span><select class="lsel">
+														<option value="0">서울</option>
+														<option value="1">부산</option>
+														<option value="2">광주</option>
+													</select></p>
+													<p class="right"><span class="date">도착지</span><select class="lsel">
+														<option value="0">제주</option>
+														<option value="1">서울</option>
+														<option value="2">부산</option>
+													</select></p></div>   
+												<div class="date"><p class="left"><span class="date">가는날</span><input type="text" name="sdate" id="sdate" style="vertical-align:top"/></p>
+													<p class="right"><span class="date">오는날</span><input type="text" name="edate" id="edate" style="vertical-align:top"/></p></div>
+													<div class="inwon"><p class="left person"><span class="tit">성인</span><span class="com">만 13세이상</span><select class="people">
+														<option value="0">1명</option>
+														<option value="1">2명</option>
+														<option value="2">3명</option></select></p>
+														<p class="left person"><span class="tit">소아</span><span class="com">만 12세이하</span><select class="people">
+														<option value="0">1명</option>
+														<option value="1">2명</option>
+														<option value="2">3명</option></select></p>
+														<p class="left person"><span class="tit">유아</span><span class="com">만 24개월미만</span><select class="people">
+														<option value="0">1명</option>
+														<option value="1">2명</option>
+														<option value="2">3명</option></select></p></div>
+														<input type="submit" value="실시간 항공 검색" />
+											</form>	
+								   </div>
+                               </li>
+                                <li>
+                                   <div class="lodge">
+								   <p class="close"><span class="hide">닫기</span><img src="./main_img/close_btn.png" /></p>
+								   <form action="#" method="">
+								     <div class="top">
+											<p><span class="tit">위치별</span><select class="lsel">
+													<option value="0">전체보기</option>
+													<option value="1">제주시권</option>
+													<option value="2">서귀포/중문권</option>
+													<option value="3">동부권</option>
+													<option value="4">서부권</option>
+											</select></p>
+											<p><span class="tit">유형별</span><select class="lsel">
+													<option value="0">전체보기</option>
+													<option value="1">호텔</option>
+													<option value="2">리조트/콘도</option>
+													<option value="3">펜션</option>
+													<option value="4">골프텔</option>
+											</select></p>
+											<p><span class="tit">객실별</span><select class="lsel">
+													<option value="0">전체보기</option>
+													<option value="1">원룸(양실)</option>
+													<option value="2">원룸(온돌)</option>
+													<option value="3">원룸+거실</option>
+													<option value="4">2룸</option>
+													<option value="5">3룸</option>
+													<option value="6">4룸</option>
+													<option value="7">5룸이상</option>
+													<option value="8">화장실(욕실)2개이상</option>
+											</select></p>
+										</div>
+										<div class="middle">
+											<p><span class="tit">체크인</span>
+											<input type="text" name="lsdate" id="lsdate" style="vertical-align:top"/></p>
+											<p><span class="tit">체크아웃</span>
+											<input type="text" name="ledate" id="ledate" style="vertical-align:top"/></p>
+										</div>
+										<div class="tail">
+												<p><span class="tit">가격</span>
+												<select class="price">
+													<option value="0">전체</option>
+													<option value="1">5만원이하</option>
+													<option value="2">5~10만원</option>
+													<option value="3">10~15만원</option>
+													<option value="4">15만원이상</option>
+												</select></p>
+												<p class="lsearch"><span class="tit">숙소명검색</span>
+													<input type="text" class="lsearch" />
+												</p>
+										</div>
+										<input type="submit" value="숙박검색" />
+										</form>
+								   </div>
+                               </li>
+                                <li>
+                                   <div>버스</div>
+                               </li>
+                                <li>
+                                   <div>택시</div>
+                               </li>
+                           </ul>
+
+                          </li>
+                   </ul>
+                  <p class="head">BEST 여행상품 <img src="./main_img/down_arrow.gif" /></p>
+				  <ul class="best_goods">
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+						<li><p><a href="#none"><img src="./main_img/best_img.jpg" /></a></p>
+							<p class="tit">라온리조트</p>
+							<p class="kind">펜션</p>
+							<p class="tail"><span>35</span><span>%</span><span>240,000</span><span>150,000원</span></p>
+						</li>
+					
+				  </ul>
+				
+        </div><!-- content끝-->
+		<div class="aside_wrap">
+				  <ul class="aside">
+                      <li><a href="#none"><img src="./main_img/icon1.png" /><span>제주맛집</span></a></li>
+						<li><a href="#none"><img src="./main_img/icon2.png" /><span>제주날씨</span></a></li>
+						<li><a href="#none"><img src="./main_img/icon3.png" /><span>제주올레</span></a></li>
+						<li><a href="#none"><img src="./main_img/icon4.png" /><span>제주여행지도</span></a></li>
+						<li><a href="#none"><img src="./main_img/icon5.png" /><span>한라산등반코스</span></a></li>
+						<li><a href="#none"><img src="./main_img/icon6.png" /><span>관광지요금</span></a></li>
+				  </ul>
+			   </div>
+        <div id="footer">
+            <ul class="info">
+               <li><p><a href="#none">국내여행표준약관</a></p></li> 
+               <li><p><a href="#none">개인정보처리방침</a></p></li> 
+               <li><p><a href="#none">고객센터</a></p></li> 
+            </ul>
+			<div style="border-top:1px solid #dadada"></div>
+            <div class="foot_cont">
+                <div class="lcont">
+                    <p>고객센터</p>
+                    <p>064)746-2727</p>
+                    <p>운영시간 09:00~18:00</p>
+                    <p>점심시간 12:00~13:00</p>
+                    <p>토.일요일 및 국공휴일 휴무</p>
+                </div>
+                <div class="rcont">
+                    <p><span>사업자등록번호 : 000-00-00000</span> <span>통신판매업신고 : 제 0000-0000&nbsp;&nbsp;&nbsp;호</span><span>관광사업등록 제 2016-11</span></p>
+                    <p><span>제주특별자치도 제주시 동문로 52,3층(일도이동)</span><span>(주)제주럭키투어 (대표이사 강철진)</span>
+                    <span>개인정보관리책임자 : 강철진</span><a href="#none">사업자정보확인</a><img src="./main_img/footer_arrow.png" /></p>
+                    <p><span>COPYRIGHT &copy; (주)제주럭키투어 ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div> <!--footer 끝 -->
+ </div>
+<script>
+	$("#rolling").rolling(1400,488,{autoscroll:1, delay:4500});
+</script> 
+
+</body>
+</html>

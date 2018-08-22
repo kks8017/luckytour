@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" /> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="./css/sub_header.css" />
+<link rel="stylesheet" href="./css/group_tour.css" />
+<link rel="stylesheet" href="./css/sub_footer.css" />    
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/addfavorite.js"></script>
+<script src="./js/common.js"></script>
+<title>제주럭키투어</title>
+<style>
+    #content .reserve_info{
+        width:1200px;margin:0 auto; border-top:1px solid #000;
+    }
+    #content .reserve_info h4{margin-left:24px;margin-top:23px;margin-bottom:13px;font-size:18px}
+    #content .reserve_info h4 img{padding-right:8px}
+    #content .goods_detail{
+        background-color:#f8f8f8;border:1px solid #dfdfdf;border-radius:4px;width:1170px;height:auto;margin:0 auto;margin-bottom:67px
+    }
+    #content .goods_detail ul li{
+      height:64px;line-height:64px;
+    }
+    #content .goods_detail ul li span{color:#666666}
+    #content .goods_detail ul li span.blue{color:#3062d0}
+    #content .goods_detail ul li span.orange{font-family:'둗움',dotum;color:#fd5001}
+    #content .goods_detail ul li span.time{font-family:'둗움',dotum;font-size:12px;color:#666666}
+    #content .goods_detail ul li span:nth-child(1){padding-left:120px}
+    #content .goods_detail ul li span:nth-child(2){padding-left:25px}
+    #content .goods_detail ul li span:nth-child(3){padding-left:10px;font-size:12px}
+    #content .goods_detail ul li span:nth-child(4){padding-left:216px}
+    #content .goods_detail ul li span:nth-child(5){padding-left:25px}
+    #content .goods_detail ul li span:nth-child(6){padding-left:15px}
+    
+    
+    #content .fee {background-color:#fff;border:1px solid #dfdfdf;border-radius:4px;width:1170px;height:auto;margin:0 auto;margin-bottom:72px}
+    #content .fee table{width:100%;border-collapse:collapse}
+    #content .fee table th{color:#000;background-color:#e8eef1;height:48px;vertical-align: middle;font-size:16px}
+    #content .fee div.tbl{padding-top:18px}
+    #content .fee table td{height:40px;text-align:center;vertical-align: middle;font-size:14px;color:#666}
+    #content .fee table td span.discount{color:#fd5001;padding-left:14px}
+    #content .fee table td span.price{color:#ff0000}
+    #content .reserve_input{background-color:#fff;border:1px solid #dfdfdf;border-radius:4px;width:1170px;height:382px;margin:0 auto;margin-bottom:34px}
+    #content .reserve_input .radio_box{border:1px solid #e6e6e6;background-color:#f8f8f8;width:634px;height:60px;margin:0 auto;text-align:center;line-height:60px;margin-top:20px;font-size:16px}
+    #content .reserve_input .radio_box span.ma{display:inline-block;margin-right:70px}
+    #content .reserve_input p.b{font-size:20px;color:#3769d5;}
+    #content .reserve_input .lcon{float:left;width:568px;height:256px;border-right:1px solid #ededed;margin-left:18px;margin-top:18px;font-size:14px}
+    #content .reserve_input .lcon p.b, .rcon p.b{text-align: center;margin-bottom:32px}
+    #content .reserve_input .rcon{float:right;width:565px;height:256px;margin-top:18px;font-size:14px;}
+    #content .reserve_input input[type='text']{border:1px solid #c8c8c8;width:110px;height:29px;margin-right:10px;padding-left:12px;margin-bottom:30px;color:#888;font-size:12px}
+    #content .reserve_input input[type='text'].email {border:1px solid #c8c8c8;width:136px;height:29px;margin-right:0px;padding-left:12px;color:#888;font-size:12px}
+    #content .reserve_input textarea{width:524px;height:100px;border:1px solid #c8c8c8;margin-top:6px;color:#888;font-size:12px;padding:12px}
+   
+    #content .agree{background-color:#f8f8f8;border:1px solid #dfdfdf;border-radius:4px;width:1170px;height:192px;margin:0 auto;margin-bottom:60px}
+    #content .agree .chk_agree{width:500px;float:left;text-align:left;margin-left:28px;margin-top:25px;color:#565656;font-size:12px;font-family:'둗움',dotum;}
+    #content .agree .chk_agree input[type='checkbox']{width:14px;height:14px;vertical-align: middle;}
+    #content .agree .chk_agree img{vertical-align:middle;padding-left:16px}
+    #content .agree .chk_agree p{padding-bottom:18px}
+    #content .agree .all_agree{width:530px;float:right;text-align:left;font-size:12px;color:#666;font-family:'둗움',dotum;
+    }
+    #content .agree .all_agree p:nth-child(1){margin-top:76px}
+    #content .agree .all_agree p:nth-child(2){margin-top:22px;margin-left:160px}
+    #content .agree .all_agree input[type='checkbox']{width:14px;height:14px;vertical-align: middle;margin-right:4px} 
+    #content .agree .all_agree span {font-size: 14px}
+    #content .agree .all_agree span:nth-child(3){padding-left:8px}
+    #content .agree .all_agree span.b{font-size:14px;color:#666666;font-family:'둗움',dotum;font-weight: bold;position:relative;top:1px}
+    #content .submit_btn{margin-bottom:25px;text-align: center}
+    
+</style>    
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="banner"  style="position:relative;">
+                <a href="#none"><img src="./image/top_banner.jpg" style="position:relative" /></a>
+                <input type="hidden" id="cookie" value="banner" />
+                <img src="./image/close_btn.png" class="close_btn" style="position:absolute;top:25px;right:102px;cursor:pointer"/>
+            </div>
+            <div class="head_wrap">
+            <div class="head">
+                <p><span class="hide">즐겨찾기</span><img src="./image/favorit_btn.png" id="favorite"/></p>
+                <ul>
+                    <li><a href="#none">로그인</a></li>
+                    <li><a href="#none">회원가입</a></li>
+                    <li><a href="./group_tour.html">단체여행문의</a></li>
+                    <li><a href="#none">고객센터</a></li>
+                    <li><a href="#none">예약확인</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="header">
+                <p><a href="#none"><span class="hide">로고</span><img src="./image/main_logo.png" /></a></p>
+                <div class="search_bar">
+                    <fieldset>
+                        <legend class="hide">통합검색</legend>
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="회원가입시 5000 포인트 적립!" />
+                            <input type="image" src="./image/search_btn.png" />
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nav_wrap">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#none">MD추천패키지</a></li>
+                        <li><a href="#none" >자유여행패키지</a></li>
+                        <li><a href="#none">버스/택시패키지</a></li>
+                        <li><a href="#none">항공</a></li>
+                        <li><a href="#none">렌트</a></li>
+                        <li><a href="#none">숙박</a></li>
+                        <li><a href="#none">버스투어</a></li>
+                        <li><a href="#none">골프투어</a></li>
+                        <li><a href="#none">관광지입장권</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- header 끝 -->
+        <div id="content">
+            <div class="search">
+               <div class="search_tit">
+                    <span class="bar mar"></span>
+                    <h3>예약정보입력</h3>
+                    <span class="bar"></span>
+               </div>
+            </div>
+            
+            <div class="reserve_info">
+                <form action="#" method="get">
+                <h4><img src="./image/dot.png" />상품 상세정보</h4>
+               <div class="goods_detail">
+                    <ul>
+                        <li><span class="blue">차량정보</span><span class="orange">레이</span><span>기아1대(5인승,경차,휘발유,오토)</span>
+                            <span span class="blue">이용일시</span><span class="orange">총24시간</span>
+                            <span class="time">2018-05-01 09:00 ~ 2018-05-05 18:00</span>
+                        </li>
+                         
+                    </ul>
+                </div>
+               <h4><img src="./image/dot.png" />요금 상세정보</h4>    
+                <div class="fee">
+                    <div class="tbl">
+                        <table>
+                            <tr>
+                                <th width="25%">기본 상품가</th>
+                                <th width="15%">할인가</th>
+                                <th width="15%">이용시간</th>
+                                <th width="15%">수량</th>
+                                <th width="30%">총 합계금액</th>
+                            </tr>
+                            <tr>
+                                 <td>97,000원</td>
+                                 <td>19,400원<span class="discount">80%↓</span></td>
+                                 <td>24시간</td>
+                                 <td>+1개</td>
+                                 <td><span class="price">19,400원</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h4><img src="./image/dot.png" />예약자 정보 입력</h4>    
+                <div class="reserve_input">
+                    <p class="radio_box"><input type="radio" name="" /><span class="ma">예약자와 사용자 동일</span>
+                        <input type="radio" name="" /><span>예약자와 사용자 다름</span></p>
+                    <div class="lcon">
+                        <p class="b">예약자</p>
+                        성명 <input type="text" name="" value="홍길동"/>
+                        연락처 <input type="text" name="" value="010-0000-0000"/>
+                        이메일 <input type="text" name="" class="email" value="syoeiop@rrrrrrr.com"/><br>
+                         <p>요청사항</p>
+                        <textarea name="">홍길동</textarea>
+                    </div>
+                    <div class="rcon">
+                        <p class="b">사용자</p>
+                        성명 <input type="text" name="" value="홍길동"/>
+                        연락처 <input type="text" name="" value="010-0000-0000"/>
+                        이메일 <input type="text" name="" class="email" value="syoeiop@rrrrrrr.com"/><br>
+                        <p>요청사항</p>
+                        <textarea name="">홍길동</textarea>
+                    </div>
+                </div>
+                <div class="agree">
+                    <div class="chk_agree">
+                        <p><input type="checkbox" name="" /><span>[렌터카] 대여자격조건을 확인하였음에 동의합니다.</span><a href="#none"><img src="./image/view_btn.png" /></a></p>
+                        <p><input type="checkbox" name="" /><span>개인정보 수집 및 이용에 동의합니다. </span><a href="#none"><img src="./image/view_btn.png" /></a></p>
+                        <p><input type="checkbox" name="" /><span>국내 여행 표준 약관에 동의합니다.</span><a href="#none"><img src="./image/view_btn.png" /></a></p>
+                        <p><input type="checkbox" name="" /><span>개인정보 제3자 제공에 동의합니다.</span><a href="#none"><img src="./image/view_btn.png" /></a></p>
+                    </div>
+                    <div class="all_agree">
+                        <p><span>개인정보 수집 및 이용, 국내여행 표준약관, 개인정보 제3차 제공에 모두 동의 하십니까?</span></p>
+                        <p><input type="checkbox" name="" /><span class="b">전체동의</span><span>합니다.</span></p>
+                    </div>
+                </div>
+                <div class="submit_btn">
+                    <input type="image"  src="./image/reserve_confirm.png" />   
+                </div>    
+                    
+                </form>
+            </div>
+        
+            
+        </div><!-- content 끝 -->
+        
+        <div id="footer">
+            <ul class="info">
+               <li><p><a href="#none">국내여행표준약관</a></p></li> 
+               <li><p><a href="#none">개인정보처리방침</a></p></li> 
+               <li><p><a href="#none">고객센터</a></p></li> 
+            </ul>
+            <div class="foot_cont">
+                <div class="lcont">
+                    <p>고객센터</p>
+                    <p>064)746-2727</p>
+                    <p>운영시간 09:00~18:00</p>
+                    <p>점심시간 12:00~13:00</p>
+                    <p>토.일요일 및 국공휴일 휴무</p>
+                </div>
+                <div class="rcont">
+                    <p><span>사업자등록번호 : 000-00-00000</span> <span>통신판매업신고 : 제 0000-0000&nbsp;&nbsp;&nbsp;호</span><span>관광사업등록 제 2016-11</span></p>
+                    <p><span>제주특별자치도 제주시 동문로 52,3층(일도이동)</span><span>(주)제주럭키투어 (대표이사 강철진)</span>
+                    <span>개인정보관리책임자 : 강철진</span><a href="#none">사업자정보확인</a><img src="./image/footer_arrow.png" /></p>
+                    <p><span>COPYRIGHT &copy; (주)제주럭키투어 ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div> <!--footer 끝 -->
+ </div>
+    
+    
+    <script>
+    $("#sdate").datepicker({
+        showOn : "both",
+        buttonImage : "./image/calender2.png",
+        buttonImageOnly : true
+    });
+        $("#edate").datepicker({
+	showOn : "both",
+	buttonImage : "./image/calender2.png",
+	buttonImageOnly : true
+        });
+
+
+	  $("#car_sdate").datepicker({
+        showOn : "both",
+        buttonImage : "./image/calender2.png",
+        buttonImageOnly : true
+    });
+        $("#car_edate").datepicker({
+			showOn : "both",
+			buttonImage : "./image/calender2.png",
+			buttonImageOnly : true
+        });
+</script>
+</body>
+</html>
