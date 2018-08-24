@@ -1,0 +1,157 @@
+    #content .search .search_tit{width:1400px;padding-top:38px;padding-bottom:29px;}
+    #content .search .search_tit:after{content:"";display:inline-block;clear: both}
+    #content .search .search_tit span.mar {margin-left:100px}
+    #content .search .search_tit span{display:inline-block;width:517px;height:12px;background-image:url("../image/bar.png");float:left}
+    #content .search .search_tit img{display:inline-block;float:left;vertical-align: middle}
+    #content .search .search_tit h3{font-size:28px;float:left;position: relative;top:-10px;padding-left:30px;padding-right:30px}       
+
+    #content .search .search_bar{width:1200px;height:100px;border-top:3px solid #5683e8;border-bottom:1px solid #d7d7d7;
+     border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;margin:0 auto;}
+    #content .search .search_bar:after{content:"";display:block;clear:both}
+    #content .search .search_bar ul{float:left;position:relative}
+    #content .search .search_bar ul li{float:left;}
+    #content .search .search_bar ul li:nth-child(1){position:absolute;left:22px;top:25px}
+    #content .search .search_bar ul li:nth-child(2){position:absolute;left:190px;top:25px}
+    #content .search .search_bar ul li:nth-child(3){position:absolute;left:365px;top:25px}
+    #content .search .search_bar ul li:nth-child(4){position:absolute;left:492px;top:25px}
+    #content .search .search_bar ul li:nth-child(5){position:absolute;left:610px;top:25px}
+    #content .search .search_bar ul li:nth-child(6){position:absolute;left:726px;top:25px}
+    #content .search .search_bar ul li:nth-child(7){position:absolute;left:856px;top:25px}
+    #content .search .search_bar ul li:nth-child(8){position:absolute;left:1052px;top:25px}
+    #content .search .search_bar ul li p{color:#3e3e3e;font-size:14px;}
+    #content .search .search_bar ul li img{position:absolute;top:26px;right:10px}
+    #content .search .search_bar ul li p span{color:#a3a3a3;font-size:12px;font-weight: normal;position:relative;left:5px}
+    #content .search .search_bar ul li p span.sp{position: relative;left:17px}
+    #content .search .search_bar ul li input[type="text"]{width:137px;height:27px;line-height:27px;border:1px solid #d6d9e0;color:#4f576c;position:relative;top:5px;padding-left:9px}
+    #content .search .search_bar ul li select.lsel{width:106px;line-height:31px;height:31px;vertical-align: middle;
+        border:1px solid #d6d9e0;color:#4f576c;font-size:12px;margin-top:5px;margin-bottom:5px;padding-left:12px;
+         background:url(../image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+    #content .search .search_bar ul li select.lsel2{width:172px;line-height:31px;height:31px;vertical-align: middle;
+        border:1px solid #d6d9e0;color:#4f576c;font-size:12px;margin-top:5px;margin-bottom:5px;padding-left:12px;
+         background: url(../image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+    
+    #content .search_list .tit{width:1200px;height:50px;line-height:50px;font-size:16px;border-bottom:1px solid #e8e9ea;margin:0 auto;text-align: center;background-color:#f9f8f8}
+    #content .search_list .tit img{display: inline-block;vertical-align: middle}
+    #content .search_list ul {width:1200px;margin:0 auto;}
+    #content .search_list ul li {background-color:#f6fafe;height:44px;border-bottom:1px solid #ddd;}
+    #content .search_list ul li img.arrow{vertical-align: middle;position: relative;left:10px}
+    #content .search_list ul li img.air_mark{vertical-align: middle;margin-left:-5x;margin-right:8px}
+    #content .search_list ul li p{display: inline-block;background:#f6fafe;}
+    #content .search_list ul li p.head{padding-left:27px;background:#fffaf8;width:260px;height:44px;line-height:44px}
+    #content .search_list ul li p.tail{margin-left:37px}
+    #content .search_list ul li span.txt{font-family:"돋움",Dotum,sans-serif;font-size:12px}
+    #content .search_list ul li span.gray{font-family:"돋움",Dotum,sans-serif;color:#6e6e6e;font-weight: bold;padding-right:10px}
+    #content .search_list ul li span.b{color:#000;font-weight: bold;}
+    #content .search_list ul li span.day{font-family:"돋움",Dotum,sans-serif;color:#0a84c3;padding-right:8px;font-size:12px}
+    #content .search_list ul li span.date{font-family:"돋움",Dotum,sans-serif;padding-left:5px;font-size:12px}
+    #content .search_list ul li span.time{font-family:"돋움",Dotum,sans-serif;color:#ff5000;font-size:12px}
+    #content .search_list ul li span.arrow{padding-left:10px;padding-right:3px}
+    #content .search_list ul li span.select_none{font-family:"돋움",Dotum,sans-serif;color:#c4c4c4;font-size:12px}
+    #content .search_list ul li img.goods_upt{vertical-align: middle;margin-left:25px}
+   
+    	.golf_search{width:1200px;border-top:3px solid #5683e8;border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;margin:0 auto;overflow-x:hidden}
+	.golf_search:after{content:"";display:block;clear:both}
+	.golf_search p.tit{width:1178px;border-bottom:1px solid #dfdfdf;height:67px;margin: 0 auto;color:#000;font-size:16px   }
+	.golf_search p input[type='text']{width:147px;height:30px;border:1px solid #c8c8c8;padding-left:12px;color:#7d7d7d;font-size:13px}
+	.golf_search p select.lsel{width:72px;line-height:33px;height:33px;vertical-align: middle;
+        border:1px solid #c8c8c8;color:#16b1eb;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-left:12px;margin-right:50px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_search p select.csel{width:93px;line-height:33px;height:33px;vertical-align: middle;
+        border:1px solid #c8c8c8;color:#7e7e7e;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-right:56px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_search p img{position:relative;top:3px;left:-21px}
+	.golf_search input[type='image']{position:relative;top:14px;}
+
+	.golf_date{width:1200px;border-bottom:1px solid #d7d7d7;margin:0 auto}
+	.golf_date p{padding-left:27px;margin-top:22px;margin-bottom:18px}
+	.golf_date p img{vertical-align:middle;display:inline-block;margin-left:34px}
+	.golf_date p input[type='text']{border:1px solid #cbcbcb;width:103px;height:20px;padding-left:12px;color:#565656}
+	.golf_date p span.com{display:inline-block;color:#7e7e7e;padding-left:0px;padding-right:7px}
+	.golf_date p select.lsel{width:142px;line-height:20px;height:20px;vertical-align: middle;
+        border:1px solid #a0a0a0;color:#565656;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-left:3px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_date p select.ssel{width:48px;line-height:20px;height:20px;vertical-align: middle;
+        border:1px solid #a0a0a0;color:#565656;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-left:3px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_date p select.hsel{width:78px;line-height:20px;height:20px;vertical-align: middle;
+        border:1px solid #a0a0a0;color:#565656;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-left:3px;position:relative;left:-50px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_date p select.msel{width:78px;line-height:20px;height:20px;vertical-align: middle;
+        border:1px solid #a0a0a0;color:#565656;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-left:3px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_date p select.wsel{width:78px;line-height:20px;height:20px;vertical-align: middle;
+        border:1px solid #a0a0a0;color:#565656;font-size:13px;margin-top:5px;margin-bottom:5px;padding-left:12px;margin-left:3px;position:relative;left:-50px;
+         background:url(./image/down_arrow.png) no-repeat 95% 50%; 
+	     -webkit-appearance: none; 
+	     -moz-appearance: none; appearance: none; }
+    select::-ms-expand { display: none; }
+	.golf_date p button{background-color:#ff9518;width:125px;height:26px;text-align:center;color:#fff;border:0px;cursor:pointer;position:relative;left:-35px;top:2px;}
+	
+	.golf_list{width:1200px;margin:30px auto}
+	.golf_list:after{content:"";display:block;clear:both}
+	.golf_list ul{float:left;width:1200px;}
+	.golf_list ul li{float:left;width:280px;height:316px;border:1px solid #cfcfcf;margin-right:8px;margin-left:8px;margin-bottom:15px}
+	.golf_list ul li:hover{float:left;width:278px;height:314px;border:2px solid #779ced;}
+	.golf_list ul li img{padding:10px}
+	.golf_list ul li p.tit{color:#242424;font-size:14px;font-family:'돋움',dotum;text-align:center;margin-top:20px;margin-bottom:15px}
+	.golf_list ul li p.wprice, .golf_list ul li p.hprice{text-align:center;margin-bottom:8px}
+	.golf_list ul li p.wprice span:nth-child(1){color:#666666;font-size:12px;font-family:'돋움',dotum;padding-right:5px}
+	.golf_list ul li p.wprice span:nth-child(2){color:#16b1eb;font-size:12px;font-family:'돋움',dotum;}
+	.golf_list ul li p.hprice span:nth-child(1){color:#666666;font-size:12px;font-family:'돋움',dotum;padding-right:5px}
+	.golf_list ul li p.hprice span:nth-child(2){color:#ff5722;font-size:12px;font-family:'돋움',dotum;}
+
+    #wrap_layer{width:1400px;background-color:#f6f9fe;margin:0 auto;overflow-x:hidden}
+	#wrap_layer .content{width:1340px;border:4px solid #4a78cd;margin:0 auto;background-color:#fff;overflow-x:hidden}
+	#wrap_layer .content:after{content:"";display:block;clear:both}
+	#wrap_layer .content h1{height:54px;line-height:54px;font-size:22px;padding-left:16px}
+	#wrap_layer .content h1 img.close_Btn{float:right;margin-right:18px;margin-top:17px}			
+    #wrap_layer .content div.pic{width:720px;float:left;}
+    #wrap_layer .content div.pic .show_img{width:703px;height:458px}
+    #wrap_layer .content div.pic p {float: left;padding-left:10px;padding-right:10px;padding-bottom:5px}
+    #wrap_layer .content div.pic ul {float:left}
+    #wrap_layer .content div.pic ul li{height:52px;float:left}
+    #wrap_layer .content div.pic ul li.pa{padding-left:10px}
+    #wrap_layer .content div.pic ul li img{float:left;padding:0;margin:0;margin-right:4px}
+    #wrap_layer .content div.pic_info{width:609px;float:left;margin-bottom:55px}
+    #wrap_layer .content div.pic_info table{padding:0; border-spacing:0px; border:0;margin-bottom:93px}
+    #wrap_layer .content div.pic_info table tr td{padding:0;margin:0;border-top:1px solid #dfdfdf}
+    #wrap_layer .content div.pic_info table tr th.tit{background-color:#779ced;color:#fff;font-size:22px;text-align:left;height:43px;line-height:43px;padding-left:12px}
+	#wrap_layer .content div.pic_info table tr th.b{border-bottom:2px solid #000}
+	#wrap_layer .content div.pic_info table tr th.name{background-color:#e8eef1;color:#000;font-size:16px;text-align:center;height:43px;line-height:43px;padding-left:12px}
+    #wrap_layer .content div.pic_info table tr td{height:52px; border-bottom:1px solid #dfdfdf;text-align: center;vertical-align: middle;font-size:12px;font-family:'돋움',dotum;color:#666}
+    #wrap_layer .content div.pic_info table tr td span{display:block;color:#666;font-family:'돋움',dotum;margin-top:8px}
+	#wrap_layer .content div.pic_info table tr td span.price{color:#ff5000;font-family:'돋움',dotum}
+    #wrap_layer .content div.pic_info table tr td span.b{font-weight:bold;display:inline-block;margin-bottom:5px}
+    #wrap_layer .content div.pic_info table tr td.price{color:#ff5000;font-family:'돋움',dotum}
+    #wrap_layer .content div.map {width:1200px;clear:both;padding-top:53px;width:1400px} 
+	#wrap_layer .content div.map:after{content:"";display:block;clear:both}
+	#wrap_layer .content div.map .map_wrap{width:1332px;border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf}
+    #wrap_layer .content div.map p.tit {height:45px;background-color:#7293ca;color:#fff;line-height:45px;margin-left:10px;margin-right:68px;padding-left:10px;margin-bottom:2px;font-size:22px;margin-bottom:10px}
+    #wrap_layer .content div.map .lcon{float:left;width:700px;padding-left:10px;}
+	#wrap_layer .content div.map .rcon{float:left;width:400px;margin-left:60px;}
+	#wrap_layer .content div.map .rcon p {font-size:12px;font-family:'돋움',dotum;line-height:20px;margin-top:10px}
+	#basic-modal-content {overflow-x:hidden}

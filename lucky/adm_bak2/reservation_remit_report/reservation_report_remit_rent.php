@@ -1,0 +1,225 @@
+<?php
+$res = new reservation();
+$report  = new report();
+
+$page_no = $_REQUEST['page_no'];
+$reserv_name = $_REQUEST['reserv_name'];
+if(!$_REQUEST['start_date']){$start_date_a = date("Y-m-d",time()); }else{$start_date_a = $_REQUEST['start_date'];}
+if(!$_REQUEST['end_date']){$end_date_a = date("Y-m-d",time()); }else{$end_date_a = $_REQUEST['end_date'];}
+$start_date = $start_date_a." 00:00:00";
+$end_date = $end_date_a." 23:59:00";
+$search_date = $_REQUEST['search_date'];
+$state = $_REQUEST['state'];
+$reserv_staff = $_REQUEST['reserv_staff'];
+$rent_company = $_REQUEST['rent_company'];
+$rent_no = $_REQUEST['rent_no'];
+
+
+
+
+$sql_staff = "select no,ad_name from ad_member order by no";
+$rs_staff    = $db->sql_query($sql_staff);
+while ($row_staff = $db->fetch_array($rs_staff)){
+    $result_staff[] = $row_staff;
+}
+$sql_company = "select no,rent_com_name from rent_company  order by no asc";
+$rs_company  = $db->sql_query($sql_company);
+while($row_company = $db->fetch_array($rs_company)) {
+    $result_company[] = $row_company;
+}
+
+$com_no =get_rentcar_company("","대표");
+$sql_rent = "select no,rent_car_name from rent_car_detail where rent_com_no='{$com_no[0]}'  order by no asc";
+$rs_rent  = $db->sql_query($sql_rent);
+while($row_rent = $db->fetch_array($rs_rent)) {
+    $result_rent[] = $row_rent;
+}
+$res->staff_no = $reserv_staff;
+$staff = $res->staff_name();
+$report->start_date = $start_date;
+$report->end_date = $end_date;
+$report->staff = $staff;
+$report->company = $rent_company;
+$report->rent_no = $rent_no;
+$report->search_date = $search_date;
+?>
+<div class="reservation_list">
+    <div>
+        <form id="sch_frm" method="post" action="?linkpage=<?=$linkpage?>&subpage=<?=$subpage?>">
+            <table>
+                <tr>
+                    <td><select name="search_date" >
+                            <option value="reserv_tour_start_date" <?if($search_date=="reserv_tour_start_date"){?>selected<?}?>>여행일</option>
+                            <option value="deposit" <?if($search_date=="deposit"){?>selected<?}?>>선금일</option>
+                        </select>
+
+                        <input type="text" name="start_date" id="start_date" value="<?=$start_date_a?>" class="air_date"> ~ <input type="text" name="end_date" id="end_date" value="<?=$end_date_a?>" class="air_date">
+                        <select name="rent_no">
+                            <option value="">렌트카를선택하세요</option>
+                            <?php
+                            foreach ($result_rent as $rent) {
+                                ?>
+                                <option value="<?=$rent['no']?>" <?if($rent_no==$rent['no']){?>selected<?}?>><?=$rent['rent_car_name']?></option>
+                                <?
+                            }
+                            ?>
+                        </select>
+                        <select name="rent_company">
+                            <option value="">업체를선택하세요</option>
+                            <?php
+                            foreach ($result_company as $company) {
+                                ?>
+                                <option value="<?=$company['no']?>" <?if($rent_company==$company['no']){?>selected<?}?>><?=$company['rent_com_name']?></option>
+                                <?
+                            }
+                            ?>
+                        </select>
+                        <select name="reserv_staff">
+                            <option value="">관리자</option>
+                            <?php
+                            foreach ($result_staff as $staff) {
+                                ?>
+                                <option value="<?=$staff['no']?>" <?if($reserv_staff==$staff['no']){?>selected<?}?>><?=$staff['ad_name']?></option>
+                                <?
+                            }
+                            ?>
+                        </select>
+                        <input type="button" id="sch_btn" value="검색">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table>
+            <tr>
+
+                <td>No.</td>
+                <td>예약자</td>
+                <td>상품타입</td>
+                <td>렌트카<br>판매사</td>
+                <td>출고일<br>반납일</td>
+                <td>판매가</td>
+                <td>입금가</td>
+                <td>선금</td>
+                <td>송금일</td>
+                <td>상태</td>
+                <td>잔금</td>
+                <td>송금일</td>
+                <td>잔금일</td>
+                <td>미송금액</td>
+                <td>예약대장</td>
+            </tr>
+            <?php
+            $rent_list = $report->rent_report();
+            $i=0;
+            if(is_array($rent_list)) {
+                $total_rent_price =0;
+                $total_rent_deposit_price =0;
+                $deposit_rent_price = 0;
+                $balance_rent_price = 0;
+                $total_rent_not_remit = 0;
+                foreach ($rent_list as $rent) {
+
+                    if ($rent['reserv_rent_deposit_state'] == "Y") {
+                        $state_deposit = "입금완료";
+                    } else {
+                        $state_deposit = "미입금";
+                    }
+                    if ($rent['reserv_rent_balance_state'] == "Y") {
+                        $state_balance = "입금완료";
+                    } else {
+                        $state_balance = "미입금";
+                    }
+                    $total_remit = 0;
+                    if($rent['reserv_rent_deposit_state']=="Y") {
+                        $total_remit = $rent['reserv_rent_deposit_price'] + $rent['reserv_rent_balance_price'];
+                        $not_remit = $rent['reserv_rent_total_deposit_price'] - $total_remit;
+                    }else{
+
+                        $not_remit = 0;
+                    }
+                    ?>
+                    <tr>
+                        <td><?= $i + 1 ?></td>
+                        <td><?= $rent['reserv_name'] ?></td>
+                        <td><?= $rent['reserv_type'] ?></td>
+                        <td><?= $rent['reserv_rent_car_name'] ?><br><?= $rent['reserv_rent_com_name'] ?></td>
+                        <td><?= substr($rent['reserv_rent_start_date'], 0, 16) ?><br><?= substr($rent['reserv_rent_end_date'], 0, 16) ?></td>
+                        <td><?= set_comma($rent['reserv_rent_total_price']) ?></td>
+                        <td><?= set_comma($rent['reserv_rent_total_deposit_price']) ?></td>
+                        <td><?= set_comma($rent['reserv_rent_deposit_price']) ?></td>
+                        <td><?= substr($rent['reserv_rent_deposit_date'],5,5) ?></td>
+                        <td><?= $state_deposit ?></td>
+                        <td><?= set_comma($rent['reserv_rent_balance_price']) ?></td>
+                        <td><?= substr($rent['reserv_rent_deposit_date'],5,5) ?></td>
+                        <td><?= $state_balance ?></td>
+                        <td><?= set_comma($not_remit) ?></td>
+                        <td><input type="button" value="예약대장" onclick="ledger('<?= $rent['reserv_user_no'] ?>')"></td>
+                    </tr>
+                    <?php
+                    $total_rent_price += $rent['reserv_rent_total_price'];
+                    $total_rent_deposit_price += $rent['reserv_rent_total_deposit_price'];
+                    $deposit_rent_price += $rent['reserv_rent_deposit_price'];
+                    $balance_rent_price += $rent['reserv_rent_balance_price'];
+                    $total_rent_not_remit += $not_remit;
+                    $i++;
+                }
+            }else{
+                ?>
+                <tr>
+                    <th colspan="16" class="tb_center"><p>등록된 정보가 없습니다.</p></th>
+                </tr>
+                <?
+            }
+            ?>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td>총판매가 : <?=set_comma($total_rent_price)?> | 총입금가  <?=set_comma($total_rent_deposit_price)?> |  선금  <?=set_comma($deposit_rent_price)?>  | 잔금  <?=set_comma($balance_rent_price)?>  | 미송금액 <?=set_comma($total_rent_not_remit)?> </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#allsel").click(function () {
+            $("input[name='sel[]']").prop("checked", function () {
+                return !$(this).prop("checked");
+            });
+        });
+        $("#list_btn").click(function () {
+
+
+            var url = "reservation/reserv_user_process.php"; // the script where you handle the form input.
+            if(confirm("정말삭제 하시겠습니다?") == false) {
+                closeWindowByMask();
+                return false;
+            }else {
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $("#list_frm").serialize(), // serializes the form's elements.
+                    success: function (data) {
+                        console.log(data); // show response from the php script.
+                    },
+                    beforeSend: function () {
+                        wrapWindowByMask();
+                    },
+                    complete: function () {
+                        closeWindowByMask();
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+        $("#sch_btn").click(function () {
+            $("#sch_frm").submit();
+        });
+    });
+    $( function() {
+        $( ".air_date" ).datepicker({
+            numberOfMonths: 3,
+            dateFormat : "yy-mm-dd",
+        });
+    });
+</script>

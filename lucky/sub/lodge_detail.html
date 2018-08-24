@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" /> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="./css/sub_header.css" />
+<link rel="stylesheet" href="./css/lodge_detail.css" />
+<link rel="stylesheet" href="./css/sub_footer.css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/lodge_tab_action.js"></script>
+<script src="./js/lodge_action.js"></script>
+<script src="./js/addfavorite.js"></script>
+<script src="./js/common.js"></script>
+<title>제주럭키투어</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="banner"  style="position:relative;">
+                <a href="#none"><img src="./image/top_banner.jpg" /></a>
+                <input type="hidden" id="cookie" value="banner" />
+                <img src="./image/close_btn.png" class="close_btn" style="position:absolute;top:25px;right:102px;cursor:pointer"/>
+            </div>
+            <div class="head_wrap">
+            <div class="head">
+                <p><span class="hide">즐겨찾기</span><img src="./image/favorit_btn.png"  id="favorite"/></p>
+                <ul>
+                    <li><a href="#none">로그인</a></li>
+                    <li><a href="#none">회원가입</a></li>
+                    <li><a href="./group_tour.html">단체여행문의</a></li>
+                    <li><a href="#none">고객센터</a></li>
+                    <li><a href="#none">예약확인</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="header">
+                <p><a href="../index.html"><span class="hide">로고</span><img src="./image/main_logo.png" /></a></p>
+                <div class="search_bar">
+                    <fieldset>
+                        <legend class="hide">통합검색</legend>
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="회원가입시 5000 포인트 적립!" />
+                            <input type="image" src="./image/search_btn.png" />
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nav_wrap">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./mdpackage.html">MD추천패키지</a></li>
+                        <li><a href="./package.html" >자유여행패키지</a></li>
+                        <li><a href="#none">버스/택시패키지</a></li>
+                        <li><a href="./air.html">항공</a></li>
+                        <li><a href="./rent.html">렌트</a></li>
+                        <li><a href="./lodge.html" class="select">숙박</a></li>
+                        <li><a href="#none">버스투어</a></li>
+                        <li><a href="./golftour.html">골프투어</a></li>
+                        <li><a href="#none">관광지입장권</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- header 끝 -->
+        <div id="content">
+            <div class="search">
+               <div class="search_tit">
+                    <!--<img src="./image/bar2.png" />-->
+                    <span class="bar mar"></span>
+                    <h3>숙소 상세보기</h3>
+                    <span class="bar"></span>
+                   <!-- <img src="./image/bar2.png" />-->
+               </div>     
+            </div>
+			
+			<!-- 상세시작 -->
+			<div class="top">
+                    <div class="pic">
+					 <p><img src="./image/hotel_image2.jpg" class="show_img"/></p>
+                        <ul>
+                             <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+							 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+							 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+						     <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+							 <li><a href="#none"><img src="./image/hotel_test1.jpg" width="72px" height="48px"/></a></li>
+							 <li><a href="#none"><img src="./image/hotel_test2.jpg" width="72px" height="48px"/></a></li>
+							 <li><a href="#none"><img src="./image/hotel_test3.jpg" width="72px" height="48px"/></a></li>
+                           
+                        </ul>   
+                    </div>
+                    <div class="pic_info">
+                      <table width="100%">
+                         <tr>
+							<td colspan="2" class="hotel_name">>> 롯데호텔</td>
+						 </tr>
+						 <tr>
+							<th>숙소위치</th><td>서귀포시 색달동 3039-3번지</td>
+					     </tr>
+						  <tr>
+							<th>전망</th><td>바다전망</td>
+						</tr>
+						 <tr> 
+							<th>주말적용가</th><td>금,토,일</td>
+						 </tr>
+						  <tr>
+							<th>부대시설</th><td>실내수영장,야외풀장,레스토랑,바,가라오케,연회장,헬스클럽,사우나,로비라운지</td>
+						 </tr>
+						  <tr>
+							<th>관련태그</th><td>연인/허니문/수영장/TV/영화촬영/조식가능/MD추천숙소</td>
+						 </tr>
+						  <tr>
+							<th>특이사항</th><td class="special">특전 및 이벤트 제공 안되는 날짜 있으므로 특전은 별도 유선문의 부탁드립니다.</td>
+						 </tr>
+                      </table>
+					 </div>
+		</div>
+		<div class="middle">
+			<ul class="tabmenu">
+				<li><a href="#none" class="first">숙소 예약하기</a></li>
+				<li><a href="#none" class="second">숙소설명 및 특전</a></li>
+				<li><a href="#none" class="third">객실정보</a></li>
+				<li><a href="#none" class="fourth">숙소위치정보</a></li>
+			</ul>
+			<div class="tab_contents">
+				<div class="tab1">
+					<div class="lcon">
+						<table>
+							<tr>
+								<td  colspan="7" class="date"><p><a href="#none"><img src="./image/prev_btn.png" /></a> 2018. 05 <a href="#none"><img src="./image/next_btn.png" /><a></p></td>
+							</tr>
+							<tr>
+								<td class="sun">일</td><td class="mon">월</td><td class="tue">화</td><td class="wed">수</td><td class="thr">목</td><td class="fri">금</td><td class="sat">토</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td><td>&nbsp;</td><td>01<span>307,000</span></td><td>02<span>307,000</span></td><td>03<span>307,000</span></td><td>04<span>307,000</span>
+								</td><td>05<span>307,000</span></td>
+							</tr>
+							<tr>
+								<td>06</td><td>07</td><td>08</td><td>09</td><td>10</td><td>11</td><td>12</td>
+							</tr>
+							<tr>
+								<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+							</tr>
+							<tr>
+								<td>20</td><td>21</td><td>22</td><td>23</td><td class="week">24<span class="week">307,000</span></td  class="week"><td  class="week">25<span class="week">307,000</span></td><td  class="week today">26<span class="week">307,000</span></td>
+							</tr>
+							<tr>
+								<td  class="week">27</td><td  class="week">28</td><td  class="week">29</td><td  class="week">30</td><td  class="week">31</td><td>&nbsp;</td><td>&nbsp;</td>
+							</tr>
+						</table>
+					</div>
+					<div class="rcon">
+						<p>원하시는 객실을 선택하시면 왼쪽 달력에 해당객실 요금이 보여집니다.</p>
+						
+						<form action="#" method="">
+							<div class="tbl_wrap">
+							<table>
+								<tr>
+									<th>객실선택</th><td><select class="lsel">
+										<option value="0">본관산테라스룸패밀리 트위(2인조식)/기준2인, 최대2인</option>
+										<option value="1">본관산테라스룸패밀리 트위(2인조식)/기준2인, 최대2인</option>
+										<option value="2">본관산테라스룸패밀리 트위(2인조식)/기준2인, 최대2인</option>
+									</select></td>
+								</tr>
+								<tr>
+									<th>입실일자</th><td><input type="text" class="date" value="2018-05-21"/><span class="com">좌측 달력에서 선택해 주세요</span></td>
+								</tr>
+								<tr>
+									<th>일정</th><td><select  class="csel"><option value="0">1박2일</option></select></td>
+								</tr>
+								<tr>
+									<th>인원</th><td>
+									<select class="csel"><option value="0">성인1명</option>
+									<option value="1">성인2명</option></select>
+									<select class="csel">
+									<option value="0">소아0명</option>
+									<option value="1">소아1명</option>
+									</select>
+									<select class="csel">
+									<option value="0">유아0명</option>
+									<option value="1">소아1명</option>
+									</select>
+									</td>
+								</tr>
+								<tr>
+									<th>객실수</th><td><select  class="csel">
+									<option value="0">1실</option>
+									<option value="1">2실</option>
+									<option value="2">3실</option>
+									<option value="3">4실</option>
+									</select></td>
+								</tr>
+								<tr>
+									<th>총요금</th><td><span class="price">250,000원</span><span class="dec">최대인원 초과시 입실불가</span></td>
+								</tr>
+							</table>
+							</div>
+							<input type="submit" value="예약하기" />
+						</form>
+						
+					</div>
+				</div>
+				<div class="tab2">
+					<p>
+					<span style="color:#ff0000;font-size:16px">매달 마지막주 월요일은 수영장 정기 휴장일입니다. </span><br>
+
+					해비치는 "가장 먼저 해가 비치는 곳"의 순우리말입니다. 객실에서 볼수 있는 일출의 장관! 창문을 열면 가득 품에 안기는 옥빛 바다!<br>
+					남태평양, 호젓한 등대, 눈부신 그린의 아름다운 제주! 해비치가 있어 그 아름다움이 더욱 빛납니다. 215실 규모의 특급 럭셔리 리조트 해비치가 최고의 서비스로 소중한 당신을 모십니다. <br>
+
+					+ 각객실은 기본 산전망, 조식 불포함/2인조식포함 요금으로구분 됩니다.(바다전망/조식추가을 원하시면 상품상담시 상담직원에게 문의하세요.) <br>
+
+
+					+ 인원추가 : 20,000원(14세이상) <br>
+					+  조식추가 : 성인:26,000원/ 소인: 16,000원 (사전예약시 할인요금)   <br>
+					**** 2018 4월 부터 조식요금 인상됩니다.<br>
+					리조트 :  성인 :  26,000원에서 -> 29,000원으로 변경/ 소인은 동일 <br><br>
+					 
+					+ 침구추가 1채 20,000원(체크인시 추가) <br>
+					+ 객실전망 : 바다전망룸(Seaside Room) 변경시 55,000원 추가 <br>
+					+ 애완동물 동반시 입실거절되며 당일취소로 간주되어 객실료를 환불 받을 수 없으니 주의바랍니다. <br>
+					+ 최대인원을 초과 입실할 수 없습니다. <br>
+					+ 극성수기(7/22~8/14) 호텔투숙객->호텔수영장, 리조트투숙객->리조트수영장만 이용가능합니다. <br>
+					+ 사계절 야외수영장 년간 이용가능(저녁 10시까지 운영) : 이용료 별도 -> 여름이외 기간은 온수가동 <br><br>
+
+
+					== 전객실공통 특전 == <br><br>
+
+					1. 비수기 선착순 바다전망 무료업그레이드(전화문의) <br>
+					2. 윈터가든(실내수영장/사계절 야외수영장/사우나 50% 할인) => 1인 할인가 성인 10,000원, 소아 5,000원  <br>
+
+					</p>
+				</div>
+				<div class="tab3">
+						<div class="tab3_wrap1">
+							 <div class="pic">
+							 <p><img src="./image/hotel_image2.jpg" class="show_pic1"/></p>
+								<ul>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test1.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test3.jpg" width="72px" height="48px"/></a></li>
+								   
+								</ul>   
+							</div>
+							<div class="pic_info">
+								  <div class="tbl_wrap">
+										  <table width="100%">
+											 <tr>
+												<th>객실명</th><td class="land">32평형(원룸/조식불포함)</td>
+											 </tr>
+											  <tr>
+												<th>객실구조</th><td>원룸</td>
+											</tr>
+											 <tr> 
+												<th>객실전망</th><td>산전망</td>
+											 </tr>
+											  <tr>
+												<th>입실기준인원</th><td><span class="inwon">4명/최대6명</span> (기준인원 초과시 추가요금발생)</td>
+											 </tr>
+											  <tr>
+												<th>1인추가요금</th><td>20,000원(14세이상)</td>
+											 </tr>
+											  <tr>
+												<th>구비사항</th><td>취사도구,에어컨,샴푸,린스,비누,타올 등</td>
+											 </tr>
+											  <tr>
+												<th>1박요금</th><td>입실기준 : 531,500원 → (↓16%) <span class="price">449,000원</span></td>
+											 </tr>
+											  <tr>
+												<th class="direct">패키지예약<br>바로가기</th><td><button>항공,렌트추가</button><button>항공추가</button><button>렌트추가</button></td>
+											 </tr>
+										  </table>
+								  </div>
+							 </div>	
+						</div>
+						<div class="tab3_wrap2">
+							 <div class="pic">
+							 <p><img src="./image/hotel_image2.jpg" class="show_pic2"/></p>
+								<ul>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test1.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test3.jpg" width="72px" height="48px"/></a></li>
+								   
+								</ul>   
+							</div>
+							<div class="pic_info">
+								  <div class="tbl_wrap">
+										  <table width="100%">
+											 <tr>
+												<th>객실명</th><td class="land">32평형(원룸/조식불포함)</td>
+											 </tr>
+											  <tr>
+												<th>객실구조</th><td>원룸</td>
+											</tr>
+											 <tr> 
+												<th>객실전망</th><td>산전망</td>
+											 </tr>
+											  <tr>
+												<th>입실기준인원</th><td><span class="inwon">4명/최대6명</span> (기준인원 초과시 추가요금발생)</td>
+											 </tr>
+											  <tr>
+												<th>1인추가요금</th><td>20,000원(14세이상)</td>
+											 </tr>
+											  <tr>
+												<th>구비사항</th><td>취사도구,에어컨,샴푸,린스,비누,타올 등</td>
+											 </tr>
+											  <tr>
+												<th>1박요금</th><td>입실기준 : 531,500원 → (↓16%) <span class="price">449,000원</span></td>
+											 </tr>
+											  <tr>
+												<th class="direct">패키지예약<br>바로가기</th><td><button>항공,렌트추가</button><button>항공추가</button><button>렌트추가</button></td>
+											 </tr>
+										  </table>
+								  </div>
+							 </div>	
+						</div>
+						<div class="tab3_wrap3">
+							 <div class="pic">
+							 <p><img src="./image/hotel_image2.jpg" class="show_pic3"/></p>
+								<ul>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_image2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test1.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test2.jpg" width="72px" height="48px"/></a></li>
+									 <li><a href="#none"><img src="./image/hotel_test3.jpg" width="72px" height="48px"/></a></li>
+								   
+								</ul>   
+							</div>
+							<div class="pic_info">
+								  <div class="tbl_wrap">
+										  <table width="100%">
+											 <tr>
+												<th>객실명</th><td class="land">32평형(원룸/조식불포함)</td>
+											 </tr>
+											  <tr>
+												<th>객실구조</th><td>원룸</td>
+											</tr>
+											 <tr> 
+												<th>객실전망</th><td>산전망</td>
+											 </tr>
+											  <tr>
+												<th>입실기준인원</th><td><span class="inwon">4명/최대6명</span> (기준인원 초과시 추가요금발생)</td>
+											 </tr>
+											  <tr>
+												<th>1인추가요금</th><td>20,000원(14세이상)</td>
+											 </tr>
+											  <tr>
+												<th>구비사항</th><td>취사도구,에어컨,샴푸,린스,비누,타올 등</td>
+											 </tr>
+											  <tr>
+												<th>1박요금</th><td>입실기준 : 531,500원 → (↓16%) <span class="price">449,000원</span></td>
+											 </tr>
+											  <tr>
+												<th class="direct">패키지예약<br>바로가기</th><td><button>항공,렌트추가</button><button>항공추가</button><button>렌트추가</button></td>
+											 </tr>
+										  </table>
+								  </div>
+							 </div>	
+						</div>
+				</div><!-- tab3 끝 -->
+				<div class="tab4">
+					<div>
+						<div style="font: 12px/normal dotum, sans-serif; width: 1200px; height: 545px; color: rgb(51, 51, 51); position: relative; font-size-adjust: none; font-stretch: normal;"><div style="height: 450px;"><a href="http://map.daum.net/?urlX=463835&amp;urlY=-47765&amp;itemId=16261247&amp;q=%ED%95%B4%EB%B9%84%EC%B9%98%ED%98%B8%ED%85%94%EC%95%A4%EB%A6%AC%EC%A1%B0%ED%8A%B8%20%EC%A0%9C%EC%A3%BC&amp;srcid=16261247&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><img width="1198" height="448" class="map" style="border: 1px solid rgb(204, 204, 204); border-image: none;" src="//t1.daumcdn.net/roughmap/imgmap/c41930a8d35ae0884bfd3662d45443fd8c5801f69425bac9e2772db4a370fac9"></a></div><div><span style="left: 0px; top: 450px; width: 1200px; height: 33px; border-right-color: rgb(219, 219, 219); border-bottom-color: rgb(219, 219, 219); border-left-color: rgb(219, 219, 219); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; position: absolute; box-sizing: border-box; background-color: rgb(255, 255, 255);"></span><span style="left: 12px; top: 459px; position: absolute;"><img src="//t1.daumcdn.net/localimg/localimages/07/2013/map/test/ico_road.gif"></span><a style="font: 400 12px/14px gulim, sans-serif; left: 27px; top: 461px; color: rgb(51, 51, 51); text-decoration: none; position: absolute; font-size-adjust: none; font-stretch: normal;" href="http://map.daum.net/?from=roughmap&amp;srcid=16261247&amp;confirmid=16261247&amp;q=%ED%95%B4%EB%B9%84%EC%B9%98%ED%98%B8%ED%85%94%EC%95%A4%EB%A6%AC%EC%A1%B0%ED%8A%B8%20%EC%A0%9C%EC%A3%BC&amp;rv=on" target="_blank">로드뷰</a><span style="display: none;">&nbsp;</span><span style="left: 79px; top: 459px; position: absolute;"><img src="//t1.daumcdn.net/localimg/localimages/07/2013/map/test/ico_street.gif"></span><a style="font: 400 12px/14px gulim, sans-serif; left: 93px; top: 461px; color: rgb(51, 51, 51); text-decoration: none; position: absolute; font-size-adjust: none; font-stretch: normal;" href="http://map.daum.net/?from=roughmap&amp;eName=%ED%95%B4%EB%B9%84%EC%B9%98%ED%98%B8%ED%85%94%EC%95%A4%EB%A6%AC%EC%A1%B0%ED%8A%B8%20%EC%A0%9C%EC%A3%BC&amp;eX=463835&amp;eY=-47765" target="_blank">길찾기</a></div><div><span style="left: 0px; top: 482px; width: 1200px; height: 63px; border-bottom-color: rgb(51, 51, 51); border-bottom-width: 0px; border-bottom-style: none; position: absolute;"></span><span style="font: 700 12px/normal dotum, sans-serif; left: 0px; top: 505px; position: absolute; font-size-adjust: none; font-stretch: normal;">제주특별자치도 서귀포시 표선면 민속해안로 537 </span></div><div><span style="font: 400 12px/normal dotum, sans-serif; left: 0px; top: 527px; color: rgb(153, 153, 153); position: absolute; font-size-adjust: none; font-stretch: normal;">064-780-8000</span></div></div>
+					</div>				
+				</div>
+			 </div>
+		</div>
+			<!-- 상세 끝 -->
+          
+            
+        </div><!-- content 끝 -->
+        
+        <div id="footer">
+            <ul class="info">
+               <li><p><a href="#none">국내여행표준약관</a></p></li> 
+               <li><p><a href="#none">개인정보처리방침</a></p></li> 
+               <li><p><a href="#none">고객센터</a></p></li> 
+            </ul>
+			<div style="border-top:1px solid #dadada"></div>
+            <div class="foot_cont">
+                <div class="lcont">
+                    <p>고객센터</p>
+                    <p>064)746-2727</p>
+                    <p>운영시간 09:00~18:00</p>
+                    <p>점심시간 12:00~13:00</p>
+                    <p>토.일요일 및 국공휴일 휴무</p>
+                </div>
+                <div class="rcont">
+                    <p><span>사업자등록번호 : 000-00-00000</span> <span>통신판매업신고 : 제 0000-0000&nbsp;&nbsp;&nbsp;호</span><span>관광사업등록 제 2016-11</span></p>
+                    <p><span>제주특별자치도 제주시 동문로 52,3층(일도이동)</span><span>(주)제주럭키투어 (대표이사 강철진)</span>
+                    <span>개인정보관리책임자 : 강철진</span><a href="#none">사업자정보확인</a><img src="./image/footer_arrow.png" /></p>
+                    <p><span>COPYRIGHT &copy; (주)제주럭키투어 ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div> <!--footer 끝 -->
+ </div>
+</body>
+</html>

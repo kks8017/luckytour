@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" /> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="./css/sub_header.css" />
+<link rel="stylesheet" href="./css/lodge.css" />
+<link rel="stylesheet" href="./css/sub_footer.css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/addfavorite.js"></script>
+<script src="./js/common.js"></script>
+<title>제주럭키투어</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="banner"  style="position:relative;">
+                <a href="#none"><img src="./image/top_banner.jpg" /></a>
+                <input type="hidden" id="cookie" value="banner" />
+                <img src="./image/close_btn.png" class="close_btn" style="position:absolute;top:25px;right:102px;cursor:pointer"/>
+            </div>
+            <div class="head_wrap">
+            <div class="head">
+                <p><span class="hide">즐겨찾기</span><img src="./image/favorit_btn.png"  id="favorite"/></p>
+                <ul>
+                    <li><a href="#none">로그인</a></li>
+                    <li><a href="#none">회원가입</a></li>
+                    <li><a href="./group_tour.html">단체여행문의</a></li>
+                    <li><a href="#none">고객센터</a></li>
+                    <li><a href="#none">예약확인</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="header">
+                <p><a href="../index.html"><span class="hide">로고</span><img src="./image/main_logo.png" /></a></p>
+                <div class="search_bar">
+                    <fieldset>
+                        <legend class="hide">통합검색</legend>
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="회원가입시 5000 포인트 적립!" />
+                            <input type="image" src="./image/search_btn.png" />
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nav_wrap">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./mdpackage.html">MD추천패키지</a></li>
+                        <li><a href="./package.html" >자유여행패키지</a></li>
+                        <li><a href="#none">버스/택시패키지</a></li>
+                        <li><a href="./air.html">항공</a></li>
+                        <li><a href="./rent.html">렌트</a></li>
+                        <li><a href="./lodge.html" class="select">숙박</a></li>
+                        <li><a href="#none">버스투어</a></li>
+                        <li><a href="./golftour.html">골프투어</a></li>
+                        <li><a href="#none">관광지입장권</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- header 끝 -->
+        <div id="content">
+            <div class="search">
+               <div class="search_tit">
+                    <!--<img src="./image/bar2.png" />-->
+                    <span class="bar mar"></span>
+                    <h3>숙박</h3>
+                    <span class="bar"></span>
+                   <!-- <img src="./image/bar2.png" />-->
+               </div>     
+            </div>
+      
+            
+            <div class="package_tabmenu">
+                
+                <div class="area">
+
+                    <div class="lodge_area">
+                        	<div class="lodge_search">
+							<form method="get"action="#">
+							   <div class="event">
+								<p>위치별<select class="sel" >
+									<option value="0">전체보기</option>
+									<option value="1">제주시권</option>
+									<option value="2">서귀포/중문권</option>
+									<option value="3">동부권</option>
+									<option value="4">서부권</option>
+								</select>
+								    유형별 <select class="sel">
+									<option value="0">전체보기</option>
+									<option value="1">호텔</option>
+									<option value="2">리조트/콘도</option>
+									<option value="3">펜션</option>
+									<option value="4">골프텔</option>
+								</select>
+                                  객실별 <select class="sel" >
+									<option value="0">전체보기</option>
+									<option value="1">원룸(양실)</option>
+									<option value="2">원룸(온돌)</option>
+									<option value="3">원룸+거실</option>
+									<option value="4">2룸</option>
+									<option value="5">3룸</option>
+									<option value="6">4룸</option>
+									<option value="7">5룸이상</option>
+									<option value="8">화장실(욕실)2개이상</option>
+								</select>
+                                  숙소명검색 <input type="text" name="search" />
+                                   <input type="image" src="./image/submit_btn.png" />
+                                  </p>
+							   </div>	 
+							</form>
+						</div>
+						<div class="lodge_list">
+							<ul>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+								<li>
+									<p><a href="./lodge_detail.html"><img src="./image/hotel_image.jpg" /></a></p>
+									<p>롯데호텔</p>
+									<p>왕복항공+스탠다드트윈(산/조식불포함)</p>
+									<p>요금적용일 2018-05-01 까지</p>
+									<p><span>35%</span><span>240,000원</span><span>150,000원</span></p>
+								</li>
+							</ul>
+
+						</div>
+                    </div>
+                 </div>
+             </div>
+            
+        </div><!-- content 끝 -->
+        
+        <div id="footer">
+            <ul class="info">
+               <li><p><a href="#none">국내여행표준약관</a></p></li> 
+               <li><p><a href="#none">개인정보처리방침</a></p></li> 
+               <li><p><a href="#none">고객센터</a></p></li> 
+            </ul>
+			<div style="border-top:1px solid #dadada"></div>
+            <div class="foot_cont">
+                <div class="lcont">
+                    <p>고객센터</p>
+                    <p>064)746-2727</p>
+                    <p>운영시간 09:00~18:00</p>
+                    <p>점심시간 12:00~13:00</p>
+                    <p>토.일요일 및 국공휴일 휴무</p>
+                </div>
+                <div class="rcont">
+                    <p><span>사업자등록번호 : 000-00-00000</span> <span>통신판매업신고 : 제 0000-0000&nbsp;&nbsp;&nbsp;호</span><span>관광사업등록 제 2016-11</span></p>
+                    <p><span>제주특별자치도 제주시 동문로 52,3층(일도이동)</span><span>(주)제주럭키투어 (대표이사 강철진)</span>
+                    <span>개인정보관리책임자 : 강철진</span><a href="#none">사업자정보확인</a><img src="./image/footer_arrow.png" /></p>
+                    <p><span>COPYRIGHT &copy; (주)제주럭키투어 ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div> <!--footer 끝 -->
+ </div>
+</body>
+</html>
