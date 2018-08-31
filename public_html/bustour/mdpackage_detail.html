@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" /> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="./css/sub_header.css" />
+<link rel="stylesheet" href="./css/mdpackage_detail.css" />
+<link rel="stylesheet" href="./css/sub_footer.css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/addfavorite.js"></script>
+<script src="./js/common.js"></script>
+<title>제주럭키투어</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="banner"  style="position:relative;">
+                <a href="#none"><img src="./image/top_banner.jpg" style="position:relative" /></a>
+                <input type="hidden" id="cookie" value="banner" />
+                <img src="./image/close_btn.png" class="close_btn" style="position:absolute;top:25px;right:102px;cursor:pointer"/>
+            </div>
+            <div class="head_wrap">
+            <div class="head">
+                <p><span class="hide">즐겨찾기</span><img src="./image/favorit_btn.png" id="favorite"/></p>
+                <ul>
+                    <li><a href="./member/login.html">로그인</a></li>
+                    <li><a href="./member/agree.html">회원가입</a></li>
+                    <li><a href="./group_tour.html">단체여행문의</a></li>
+                    <li><a href="./customer/customer.html">고객센터</a></li>
+                    <li><a href="./customer/reserve_confirm.html">예약확인</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="header">
+                <p><a href="../index.html"><span class="hide">로고</span><img src="./image/main_logo.png" /></a></p>
+                <div class="search_bar">
+                    <fieldset>
+                        <legend class="hide">통합검색</legend>
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="회원가입시 5000 포인트 적립!" />
+                            <input type="image" src="./image/search_btn.png" />
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nav_wrap">
+                <nav class="nav">
+                    <ul>
+                        <!--<li><a href="./mdpackage.html" class="select">MD추천패키지</a></li>-->
+                        <li><a href="./package.html">자유여행패키지</a></li>
+                        <li><a href="./buspkg.html">버스/택시패키지</a></li>
+                        <li><a href="./air.html">항공</a></li>
+                        <li><a href="./rent.html">렌트카</a></li>
+                        <li><a href="./lodge.html">숙소</a></li>
+                        <li><a href="./mdpackage.html" class="select">버스투어</a></li>
+                        <li><a href="./golftour.html">골프투어</a></li>
+                        <li><a href="./tour_position.html">관광지입장권</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- header 끝 -->
+        <div id="content">
+            <div class="search">
+               <div class="search_tit">
+                    <span class="bar mar"></span>
+                    <h3>버스투어</h3>
+                    <span class="bar"></span>
+               </div>
+            </div>
+            
+            <!-- md 추천 상세 시작  -->
+            <div class="detail">
+                <div class="top">
+                    <div class="lcon">
+                        <img src="./image/mdpackage_detail.jpg" />
+                    </div>
+                    <div class="rcon">
+                        <p>>> 한라산투어코스(2박3일)</p>
+                        <form action="#" method="">
+                            <div class="tbl_wrap">
+                            <table>
+                                <tr>
+                                    <th>상품선택</th><td><select class="lsel">
+                                                    <option value="0">한라산 등반/제주관광</option>
+                                                    <option value="1">고품격 레져관광</option>
+                                                    <option value="2">마라도&amp;우도투어</option>
+                                                    <option value="3">노쇼핑투어</option>
+                                                </select></td>
+                                </tr>
+                                <tr>
+                                    <th>포함내용</th><td><span class="com">유리의성+점보빌리지+로케디오월드+한라산등반</span></td>
+                                </tr>
+                                <tr>
+                                    <th>1인기준 투어비</th><td><span class="price">113,800원</span><span class="com">(항공,숙박,차량 불포함 가격)</span></td>
+                                </tr>
+                                <tr>
+                                    <th>이용일자/인원</th><td><input type="text" name="md_package" id="md_package" style="vertical-align:top" class="date"/><select name="" class="ssel">
+                                        <option value="0">성인1명</option>
+                                        <option value="1">성인2명</option>
+                                        <option value="2">성인3명</option>
+                                        <option value="3">성인4명</option>
+                                    </select>
+                                    <select name="" class="ssel">
+                                        <option value="0">소아0명</option>
+                                        <option value="1">소아1명</option>
+                                        <option value="2">소아2명</option>
+                                        <option value="3">소아3명</option>
+                                    </select> <span class="com ma">(소아:만12세이하)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>총요금</th><td><span class="total_price">10,000원</span></td>
+                                </tr>
+                            </table>
+                            </div>
+                        <input type="image" src="./image/reserve_btn.png" />
+                        </form>    
+                    </div>
+                </div> <!-- top 끝 -->
+                <div class="middle"> <!-- middle 시작 -->
+                    <p>>> 2박3일 여행일정</p>
+                    <div class="tbl_wrap">
+                    <table>
+                        <tr>
+                            <th>1일차</th>
+                            <td>김포출발 → 공항도착 → 유리의성 → 소인국테마파크 → 정보빌리지 → <span class="food">>중식(고등어조림)</span> → 송악산 → 로케디오월드 → 신비의도로 → 한라수목원 → 러브랜드 → <span class="food">석식(회정식)</span> → 숙소도착</td>
+                        </tr>
+                        <tr>
+                            <th>2일차</th>
+                            <td>김포출발 → 공항도착 → 유리의성 → 소인국테마파크 → 정보빌리지 → <span class="food">>중식(고등어조림)</span> → 송악산 → 로케디오월드 → 신비의도로 → 한라수목원 → 러브랜드 → <span class="food">석식(회정식)</span> → 숙소도착</td>
+                        </tr>
+                        <tr>
+                            <th>3일차</th>
+                            <td>김포출발 → 공항도착 → 유리의성 → 소인국테마파크 → 정보빌리지 → <span class="food">>중식(고등어조림)</span> → 송악산 → 로케디오월드 → 신비의도로 → 한라수목원 → 러브랜드 → <span class="food">석식(회정식)</span> → 숙소도착</td>
+                        </tr>
+                    </table>
+                    </div>    
+                </div> <!-- middle 끝 -->
+                <div class="tail">
+                    <p class="ma"><img src="./image/first_day.gif" /></p>
+                        <div class="tail_wrap">
+                            <p><span class="num">1</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                            <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>
+                        <div class="tail_wrap">
+                            <p><span class="num">2</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                            <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>  
+                    
+                    <p class="ma"><img src="./image/second_day.gif" /></p>
+                        <div class="tail_wrap">
+                            <p><span class="num">1</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                           <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>
+                        <div class="tail_wrap">
+                            <p><span class="num">2</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                            <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>    
+                    
+                    <p class="ma"><img src="./image/third_day.gif" /></p>
+                        <div class="tail_wrap">
+                            <p><span class="num">1</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                            <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>
+                        <div class="tail_wrap">
+                            <p><span class="num">2</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                            <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>      
+                    
+                    <p class="ma"><img src="./image/fourth_day.gif" /></p>
+                        <div class="tail_wrap">
+                            <p><span class="num">1</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                           <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>
+                        <div class="tail_wrap">
+                            <p><span class="num">2</span><span class="tit">유리의 성</span><span class="com">여러나라의 조각가들이 유리를 녹여 유리조형물로 작품화한 유리 테마공원</span></p>
+                            <ul>
+                                <li><img src="./image/mdpackage_detail_left.jpg" class="left"/></li>
+                                <li><img src="./image/mdpackage_detail_right.jpg" class="right"/></li>
+                            </ul>
+                        </div>    
+                    
+                </div>
+            </div>
+            <!-- md 추천 상세 끝  -->
+        </div><!-- content 끝 -->
+        
+        <div id="footer">
+            <ul class="info">
+               <li><p><a href="./policy/policy.html">국내여행표준약관</a></p></li> 
+               <li><p><a href="./policy/privacy.html">개인정보처리방침</a></p></li> 
+               <li><p><a href="./customer/customer.html">고객센터</a></p></li> 
+            </ul>
+			<div style="border-top:1px solid #dadada"></div>
+            <div class="foot_cont">
+                <div class="lcont">
+                    <p>고객센터</p>
+                    <p>064)746-2727</p>
+                    <p>운영시간 09:00~18:00</p>
+                    <p>점심시간 12:00~13:00</p>
+                    <p>토.일요일 및 국공휴일 휴무</p>
+                </div>
+                <div class="rcont">
+                    <p><span>사업자등록번호 : 000-00-00000</span> <span>통신판매업신고 : 제 0000-0000&nbsp;&nbsp;&nbsp;호</span><span>관광사업등록 제 2016-11</span></p>
+                    <p><span>제주특별자치도 제주시 동문로 52,3층(일도이동)</span><span>(주)제주럭키투어 (대표이사 강철진)</span>
+                    <span>개인정보관리책임자 : 강철진</span><a href="#none">사업자정보확인</a><img src="./image/footer_arrow.png" /></p>
+                    <p><span>COPYRIGHT &copy; (주)제주럭키투어 ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div> <!--footer 끝 -->
+ </div>
+
+</body>
+</html>
